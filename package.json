@@ -1,0 +1,94 @@
+{
+  "name": "clearway-document-viewer",
+  "version": "0.0.0",
+  "engines": {
+    "node": "22.12.0"
+  },
+  "engineStrict": true,
+  "volta": {
+    "node": "22.12.0"
+  },
+  "scripts": {
+    "start:win": "set NG_APP_ENV=development && ng serve --configuration development --project web",
+    "start": "ng serve --configuration development --project web",
+    "start:prod": "NG_APP_ENV=production ng serve --configuration production --project web",
+    "build": "npm run build:prod",
+    "build:dev": "NG_APP_ENV=development ng build --configuration development --project web",
+    "build:prod": "NG_APP_ENV=production ng build --configuration production --project web",
+    "test": "ng test --no-watch",
+    "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "coverage": "ng test --code-coverage --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "lint": "ng lint --cache && npm run stylelint && npm run prettier",
+    "lint:fix": "ng lint --cache --fix && npm run stylelint:fix && npm run prettier:fix",
+    "prepare": "husky install",
+    "prettier": "prettier --check projects/**/*.{html,*css}",
+    "prettier:fix": "prettier --write projects/**/*.{html,*css}",
+    "stylelint": "stylelint projects/**/*.*css",
+    "stylelint:fix": "stylelint --cache --fix projects/**/*.*css "
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@angular/animations": "^19.0.1",
+    "@angular/cdk": "^19.0.1",
+    "@angular/common": "^19.0.1",
+    "@angular/compiler": "^19.0.1",
+    "@angular/core": "^19.0.1",
+    "@angular/forms": "^19.0.1",
+    "@angular/material": "^19.0.1",
+    "@angular/platform-browser": "^19.0.1",
+    "@angular/platform-browser-dynamic": "^19.0.1",
+    "@angular/router": "^19.0.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "rxjs": "^7.4.0",
+    "tslib": "^2.7.0",
+    "zod": "^3.23.8",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.2",
+    "@angular-eslint/builder": "^19.0.0",
+    "@angular-eslint/eslint-plugin": "^19.0.0",
+    "@angular-eslint/eslint-plugin-template": "^19.0.0",
+    "@angular-eslint/schematics": "^19.0.0",
+    "@angular-eslint/template-parser": "^19.0.0",
+    "@angular/cli": "^19.0.2",
+    "@angular/compiler-cli": "^19.0.1",
+    "@eslint/compat": "^1.2.2",
+    "@eslint/js": "^9.13.0",
+    "@faker-js/faker": "^8.1.0",
+    "@ngneat/spectator": "^19.1.2",
+    "@ngx-env/builder": "^19.0.2",
+    "@saritasa/eslint-config-saritasa": "^3.0.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/jasmine": "^5.1.4",
+    "angular-eslint": "^18.4.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-rxjs": "^5.0.3",
+    "husky": "^8.0.3",
+    "jasmine-core": "^5.4.0",
+    "jasmine-marbles": "^0.9.2",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "^5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.3.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.1"
+  },
+  "overrides": {
+    "eslint-plugin-rxjs": {
+      "eslint": "^9.0.0"
+    }
+  },
+  "lint-staged": {
+    "projects/**/*.{ts,html}": "eslint --cache --fix",
+    "projects/**/*.*css": "stylelint --cache --fix",
+    "projects/**/*.{html,*css}": "prettier --write"
+  }
+}

@@ -1,0 +1,43 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "paths": {
+      "@clrwdoc/common/*": [
+        "projects/common/src/lib/*"
+      ],
+      "@clrwdoc/common/testing/*": [
+        "projects/common/src/testing/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "es2020",
+    "lib": [
+      "es2022",
+      "dom"
+    ],
+    /* enables ECMAScript standard compliant behavior to support enable isolatedModules.*/
+    "useDefineForClassFields": true
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+}
