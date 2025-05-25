@@ -1,0 +1,21 @@
+<mat-toolbar
+	class="toolbar"
+	color="primary"
+>
+	<clrwdocw-zoom-control />
+	<button
+		mat-flat-button
+		(click)="submit()"
+		type="submit"
+	>
+		Save
+	</button>
+</mat-toolbar>
+@if (document()) {
+	<clrwdocw-document-viewer-scrolling
+		[style.--scale-factor]="scale()"
+		class="viewer-container"
+	/>
+} @else {
+  <mat-progress-spinner/>
+}

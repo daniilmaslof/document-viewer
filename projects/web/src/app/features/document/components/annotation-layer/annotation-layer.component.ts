@@ -98,6 +98,7 @@ export class AnnotationLayerComponent {
 			.pipe(takeUntilDestroyed(this.destroyRef))
 			.subscribe(text => {
 				if (text) {
+					//TODO Maslov D Реализовать нормальный расчёт размеров текстовой аннотации (скрытй элемент).
 					const elementSize = { width: text.length * 14, height: text.length * 14 };
 					const containerSize = {
 						width: this.containerElement.offsetWidth,

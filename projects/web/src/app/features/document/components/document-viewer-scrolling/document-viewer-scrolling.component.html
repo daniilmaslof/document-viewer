@@ -1,0 +1,27 @@
+@if (documentForm) {
+  <form [formGroup]="documentForm">
+    <div class="scrollable-content">
+      <cdk-virtual-scroll-viewport
+          clrwdocwScaleScrollOnZoom
+          [style.--document-renderer-content-width.px]="maxWidthOfScrollingContainer()"
+          class="scroll-viewport"
+      >
+        <div  *cdkVirtualFor="let page of pages();let index = index;trackBy: trackByFunction"
+            class="page-container"
+        >
+          <div
+              class="page"
+              [style.width.px]="page.width"
+              [style.height.px]="page.height"
+          >
+            <clrwdocw-document-page [page]="page"/>
+            <clrwdocw-annotation-layer
+                [annotationLayerForm]="documentForm.controls.annotationLayers.at(index)"
+                class="annotation-layer"
+            />
+          </div>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </form>
+}
