@@ -6,7 +6,7 @@
 
 ## Ссылка на приложение
 
-[Ссылка на github-pages]()
+[Ссылка на github-pages](https://daniilmaslof.github.io/document-viewer)
 
 ### Описание решения
 
