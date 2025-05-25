@@ -1,0 +1,16 @@
+<div class="container">
+  <ng-content></ng-content>
+  <div class="drag-hint" [hidden]="onDrag || onWrongDrag">
+    Drag file here to upload
+  </div>
+  <div class="drag-hint on-drag" [hidden]="!onDrag">
+    Drop file here
+  </div>
+  <div class="drag-hint on-wrong-drag" [hidden]="!onWrongDrag">
+    Supported image only!
+  </div>
+</div>
+<button class="select-file-button" mat-raised-button color="primary" type="button" (click)="fileInput.click()">
+  Select file
+</button>
+<input [accept]="acceptType()" (change)="onUpload($event)" (click)="clearValue(fileInput)" type="file" hidden #fileInput>

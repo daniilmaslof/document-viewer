@@ -1,0 +1,39 @@
+:host {
+    display: block;
+    --image-size: 150px;
+    --uploader-size: 300px;
+}
+
+.title {
+    text-align: center;
+}
+
+.uploader {
+    margin: auto;
+    width: var(--uploader-size);
+    min-height: var(--image-size);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: var(--error-color);
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--image-size);
+    min-height: var(--image-size);
+}
