@@ -193,6 +193,8 @@ export default tsEslintConfig(
 	{
 		files: ['projects/web/**/*.ts'],
 		rules: {
+			'@angular-eslint/no-host-metadata-property': 'off',
+			'@typescript-eslint/naming-convention': 'off',
 			'@angular-eslint/directive-selector': [
 				'error',
 				{

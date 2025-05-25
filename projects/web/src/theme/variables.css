@@ -12,14 +12,36 @@
 
 	/** Prevalent color in the application */
 	--primary-color: #808080;
+	--base-contrast-color: white;
 	--primary-contrast-color: white;
 	--primary-dark-color: #505050;
 	--primary-dark-contrast-color: white;
 	--primary-light-color: #a0a0a0;
 	--primary-light-contrast-color: black;
 
+	--neutral-color-100: rgba(238, 242, 246, 1);
+	--neutral-color-200: rgba(227, 232, 239, 1);
+
+	--warn-color: rgb(228, 0, 45);
+	--warn-color-50: rgba(254, 243, 242, 1);
+	--warn-color-100: rgb(254, 228, 226);
+	--warn-color-200: rgba(254, 205, 202, 1);
+	--warn-color-500: rgba(240, 68, 56, 1);
+	--warn-dark-text-color: rgba(180, 35, 24, 1);
+	--warn-light-text-color: var(--base-contrast-color);
+
 	--background-color: white;
 	--background-contrast-color: black;
 
 	--error-color: red;
+
+	--space-m: 16px;
+	--border-radius: 8px;
+	--font-size-small: 12px;
+	--font-size: 14px;
+	--font-size-large: 16px;
+	--font-size-very-large: 24px;
+	--main-gap: 16px;
+	--document-renderer-content-width: 0;
+	--scale-factor: 1;
 }

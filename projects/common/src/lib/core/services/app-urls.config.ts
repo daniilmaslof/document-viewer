@@ -11,13 +11,11 @@ export class AppUrlsConfig {
 
 	private readonly appConfigService = inject(AppConfig);
 
-	/**
-	 * Checks whether the url is application-scoped.
-	 * @param url Url to check.
-	 */
-	public isApplicationUrl(url: string): boolean {
-		return url.startsWith(this.appConfigService.apiUrl);
-	}
+	/** Document-related routes. */
+	public readonly document = {
+		getDocuments: this.toApi('documents'),
+		getDocument: this.toApi('documents/getDocument'),
+	} as const;
 
 	private toApi(...args: readonly string[]): string {
 		const path = args.join('/');

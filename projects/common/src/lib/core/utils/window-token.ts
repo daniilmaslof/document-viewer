@@ -3,7 +3,6 @@ import { inject, InjectionToken } from '@angular/core';
 
 import { assertNonNull } from '../utils/assert-non-null';
 
-
 /**
  * Injection token to use instead of global window object.
  */
