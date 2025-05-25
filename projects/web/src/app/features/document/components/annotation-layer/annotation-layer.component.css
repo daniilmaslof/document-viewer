@@ -1,0 +1,10 @@
+:host {
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
+
+.menu-trigger {
+	position: absolute;
+}

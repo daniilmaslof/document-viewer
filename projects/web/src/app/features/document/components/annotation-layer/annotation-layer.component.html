@@ -1,0 +1,33 @@
+@for (control of annotationLayerForm().value.annotations; let index = $index; track index) {
+	<clrwdocw-annotation
+        (removeAnnotation)="onRemoveAnnotation(index)"
+		[containerHeight]="containerElement.offsetHeight"
+		[containerWidth]="containerElement.offsetWidth"
+		[formControl]="annotationLayerForm().controls.annotations.at(index)"
+	/>
+}
+<mat-menu #appMenu="matMenu">
+	<ng-template matMenuContent>
+		<button
+			type="button"
+			mat-menu-item
+			(click)="openTextAnnotationDialog()"
+		>
+			Текст
+		</button>
+		<button
+			type="button"
+			mat-menu-item
+			(click)="openUploadImageDialog()"
+		>
+			Картинка
+		</button>
+	</ng-template>
+</mat-menu>
+
+<div
+	 class="menu-trigger"
+	[style.left.px]="menuPosition().x"
+	[style.top.px]="menuPosition().y"
+	[matMenuTriggerFor]="appMenu"
+></div>
