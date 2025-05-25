@@ -1,0 +1,19 @@
+<div class="zoom-controls">
+	<button
+		mat-flat-button
+		color="accent"
+		(click)="zoomService.zoomOut()"
+		[disabled]="!zoomService.canZoomOut()"
+	>
+		Zoom Out
+	</button>
+	{{ zoomService.currentScale() | percent }}
+	<button
+		mat-flat-button
+		color="accent"
+		(click)="zoomService.zoomIn()"
+		[disabled]="!zoomService.canZoomIn()"
+	>
+		Zoom In
+	</button>
+</div>
