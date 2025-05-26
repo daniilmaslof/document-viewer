@@ -33,7 +33,6 @@ export class DocumentViewerPageComponent {
 	/** Submit. */
 	public submit(): void {
 		// eslint-disable-next-line no-console
-		console.log(this.documentViewerPageService.documentForm)
 		console.log(this.documentViewerPageService.documentForm.value);
 	}
 }
