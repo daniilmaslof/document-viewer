@@ -13,7 +13,7 @@
 	}
 	<clrwdocw-uploader
 		(filesDropped)="uploadFile($event)"
-        [class.hide-hint]="uploadedImageUrl()"
+		[class.hide-hint]="uploadedImageUrl()"
 		class="uploader"
 	>
 		<div class="container">
@@ -28,12 +28,18 @@
 	</clrwdocw-uploader>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-	<button mat-button type="button" (click)="close()">Cancel</button>
 	<button
-        type="button"
-        [disabled]="!image()"
+		mat-button
+		type="button"
+		(click)="close()"
+	>
+		Cancel
+	</button>
+	<button
+		type="button"
+		[disabled]="!image()"
 		mat-flat-button
-        (click)="saveFiles()"
+		(click)="saveFiles()"
 		color="primary"
 	>
 		Save

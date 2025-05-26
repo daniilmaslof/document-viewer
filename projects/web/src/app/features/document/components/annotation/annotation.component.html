@@ -1,23 +1,31 @@
 <div
-    class="box"
-    (click)="$event.stopPropagation()"
-	(cdkDragEnded)="changePosition($event);"
-    [cdkDragFreeDragPosition]="startPoint()"
+	class="box"
+	(click)="$event.stopPropagation()"
+	(cdkDragEnded)="changePosition($event)"
+	[cdkDragFreeDragPosition]="startPoint()"
 	cdkDragBoundary=".annotation-layer"
 	cdkDrag
 >
-  <button (click)="removeAnnotation.emit()" type="button" class="remove-annotation-button" mat-mini-fab>
-    <mat-icon>delete</mat-icon>
-  </button>
-  @switch (value()?.type) {
-    @case ("image") {
-      <img class="image-annotation" alt="" [src]="value()?.content">
-    }
-    @case ("text") {
-      <div class="text-annotation">
-        {{ value()?.content }}
-      </div>
-    }
-  }
-
+	<button
+		(click)="removeAnnotation.emit()"
+		type="button"
+		class="remove-annotation-button"
+		mat-mini-fab
+	>
+		<mat-icon>delete</mat-icon>
+	</button>
+	@switch (value()?.type) {
+		@case ("image") {
+			<img
+				class="image-annotation"
+				alt=""
+				[src]="value()?.content"
+			/>
+		}
+		@case ("text") {
+			<div class="text-annotation">
+				{{ value()?.content }}
+			</div>
+		}
+	}
 </div>

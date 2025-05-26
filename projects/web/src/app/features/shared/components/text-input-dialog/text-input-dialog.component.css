@@ -1,15 +1,15 @@
 :host {
-  display: block;
+	display: block;
 }
 
 .full-width {
-  width: 100%;
+	width: 100%;
 }
 
 mat-dialog-content {
-  min-width: 300px;
+	min-width: 300px;
 }
 
 textarea {
-  resize: vertical;
+	resize: vertical;
 }

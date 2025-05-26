@@ -8,5 +8,5 @@
 
 /** It is necessary to add horizontal scrolling if a large element appears in the viewport to avoid shifting the view. */
 .cdk-virtual-scroll-content-wrapper.cdk-virtual-scroll-content-wrapper {
-    width: var(--document-renderer-content-width);
+	width: var(--document-renderer-content-width);
 }
