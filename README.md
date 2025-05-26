@@ -21,7 +21,7 @@
 
   >  **Минусы**: Проценты недостаточно точны — возможна погрешность из-за округлений.
 
-- Для аннотаций создал **CVA** (ControlValueAccessor) для изменения значения контрола при изменении положения (`cdk-drag-drop`).
+- Для аннотаций использую **CVA** (ControlValueAccessor) для изменения значения контрола при изменении положения (`cdk-drag-drop`).
 
   >  **Минусы**: Нельзя разместить аннотацию между страницами.
 - Для загрузки изображения использую диалог `input file` + drag and drop + [readDataUrlAsImage](https://github.com/daniilmaslof/document-viewer/blob/master/projects/common/src/lib/core/utils/rxjs/read-data-url-as-image.ts).
